@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Speaker Social Kit | Retail Innovation Symposium</title>
+<meta name="description" content="Download your speaker creative and copy your post caption for The Retail Innovation Symposium on November 9, 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=Spectral:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<style>
+  :root{--impact-blue:#264CD7;--off-white:#F4F4F6;--black:#1C1B1B;--white:#FFFFFF;--gray-1:#E4E4E4;--gray-3:#B3B2AD;--accent-blue:#B3C9F7}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Inter Tight",system-ui,sans-serif;font-size:16px;line-height:1.6;color:var(--black);background:var(--off-white);-webkit-text-size-adjust:100%}
+  body.locked{overflow:hidden}
+  h1,h2,h3{font-family:"Spectral",Georgia,serif;font-weight:300;line-height:1.15}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+
+  header{background:var(--white);border-bottom:1px solid var(--gray-1);padding:14px 0}
+  .brand{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .brand img{height:32px;width:auto}
+  .brand span{font-size:13px;color:var(--gray-3)}
+
+  .hero{position:relative;overflow:hidden;background:var(--impact-blue);color:var(--white);padding:36px 0 32px}
+  .hero::before{content:"";position:absolute;inset:0;opacity:.10;pointer-events:none;
+    background-image:linear-gradient(var(--white) 1px,transparent 1px),linear-gradient(90deg,var(--white) 1px,transparent 1px);background-size:40px 40px}
+  .hero .wrap{position:relative}
+  .hero .pre{font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;color:#E3F576}
+  .hero h1{font-size:clamp(26px,3.4vw,40px);max-width:none;margin-bottom:10px}
+  .hero h1 br{display:none}
+  .hero .lede{font-size:16px;max-width:60ch;color:var(--accent-blue)}
+  .hero .meta{display:inline-block;margin-top:14px;padding:7px 14px;border:1px solid rgba(255,255,255,.4);border-radius:999px;font-size:13px}
+  @media (min-width:700px){ .hero h1 br{display:inline} }
+
+  .intro{padding:28px 0 4px}
+  .intro h2{font-size:clamp(26px,3.5vw,36px);margin-bottom:8px}
+  .intro p{max-width:70ch;color:#4a4a48;font-size:15px}
+  .intro.general{padding-top:8px;border-top:1px solid var(--gray-1);margin-top:8px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;padding:20px 0 40px}
+  .card{background:var(--white);border:1px solid var(--gray-1);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .card img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top;display:block;background:var(--off-white);border-bottom:1px solid var(--gray-1)}
+  .card .body{padding:16px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .card h3{font-size:24px;color:var(--impact-blue)}
+  .card .role{font-size:14px;color:#4a4a48;margin-top:-4px}
+  .card label{font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-3)}
+  .card textarea{width:100%;min-height:150px;padding:10px;font:inherit;font-size:16px;line-height:1.5;color:var(--black);
+    background:var(--off-white);border:1px solid var(--gray-1);border-radius:8px;resize:vertical}
+  .card textarea:focus{outline:2px solid var(--impact-blue);outline-offset:1px;border-color:var(--impact-blue)}
+  .btns{display:flex;gap:10px;margin-top:auto;padding-top:4px}
+  .btn{flex:1;display:inline-flex;align-items:center;justify-content:center;font:inherit;font-size:15px;font-weight:500;padding:14px 16px;border-radius:8px;cursor:pointer;text-align:center;text-decoration:none;min-height:48px;transition:background .15s}
+  .btn-primary{background:var(--impact-blue);color:var(--white);border:1px solid var(--impact-blue)}
+  .btn-primary:hover{background:#1f3fb3}
+  .btn-secondary{background:var(--white);color:var(--impact-blue);border:1px solid var(--impact-blue)}
+  .btn-secondary:hover{background:var(--off-white)}
+  .btn-ghost{background:var(--off-white);color:var(--black);border:1px solid var(--gray-1)}
+  .btn-ghost:hover{background:var(--gray-1)}
+  .note{font-size:13px;color:var(--impact-blue);min-height:18px}
+  .note a{color:var(--impact-blue)}
+
+  footer{background:var(--white);border-top:1px solid var(--gray-1);padding:20px 0;font-size:13px;color:var(--gray-3)}
+  footer a{color:var(--impact-blue);text-decoration:none}
+
+  /* Preview modal */
+  .overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:flex-start;justify-content:center;padding:24px 12px;overflow-y:auto;z-index:100}
+  .overlay.open{display:flex}
+  .modal{width:100%;max-width:555px;background:#fff;border-radius:12px;overflow:hidden;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:rgba(0,0,0,.9)}
+  .modal-top{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:var(--off-white);border-bottom:1px solid var(--gray-1);font-family:"Inter Tight",sans-serif;font-size:13px;color:#4a4a48}
+  .modal-top button{font:inherit;font-size:13px;font-weight:500;color:var(--impact-blue);background:none;border:0;cursor:pointer;padding:6px 8px}
+  .post{padding:12px 16px 4px}
+  .post-head{display:flex;gap:10px;align-items:flex-start}
+  .post-head img{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:top;flex:none;background:#fff}
+  .post-head .who{flex:1;min-width:0}
+  .post-head .name{font-size:14px;font-weight:600;line-height:1.3}
+  .post-head .sub{font-size:12px;color:rgba(0,0,0,.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .post-head .time{font-size:12px;color:rgba(0,0,0,.6)}
+  .post-text{font-size:14px;line-height:1.45;margin-top:10px;white-space:pre-wrap;word-wrap:break-word}
+  .post-text a{color:#0a66c2;text-decoration:none;font-weight:600}
+  .post-text .more{color:rgba(0,0,0,.6);background:none;border:0;cursor:pointer;font:inherit;font-size:14px;padding:0}
+  .post-text .more:hover{color:#0a66c2;text-decoration:underline}
+  .post-media{margin-top:10px;display:block;width:100%;background:#f3f2ef}
+  .post-media img{display:block;width:100%;height:auto}
+  .post-stats{display:flex;justify-content:space-between;padding:8px 16px;font-size:12px;color:rgba(0,0,0,.6);border-bottom:1px solid #e6e6e6}
+  .post-actions{display:flex;justify-content:space-around;padding:4px 8px}
+  .post-actions span{display:flex;align-items:center;gap:6px;padding:10px 8px;font-size:13px;font-weight:600;color:rgba(0,0,0,.6);border-radius:4px}
+  .post-actions svg{width:18px;height:18px;fill:currentColor}
+
+  @media (max-width:600px){
+    .hero{padding:28px 0 24px}
+    .hero h1{font-size:26px}
+    .hero .lede{font-size:15px}
+    .brand span{display:none}
+    .grid{grid-template-columns:1fr;gap:16px;padding:16px 0 32px}
+    .card img{aspect-ratio:4/3}
+    .btns{flex-direction:column}
+    footer .wrap{display:flex;flex-direction:column;gap:6px}
+    .overlay{padding:0}
+    .modal{border-radius:0;min-height:100%}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap brand">
+    <img src="https://cdn.prod.website-files.com/68f1125b379cfbe311ed1c6e/6a47891824c7cdccff5761f2_Impact-logo.avif" alt="Impact Analytics">
+    <span>in partnership with Columbia Business School</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="pre">Speaker social kit</p>
+    <h1>The Retail Innovation Symposium:<br>Rethinking the <em>AI-Enabled</em> Enterprise</h1>
+    <p class="lede">Download the creative, copy the caption, and share it on LinkedIn.</p>
+    <span class="meta">November 9, 2026 &nbsp;|&nbsp; Columbia Business School, New York</span>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <h2>Speaker posts</h2>
+    <p>Each card holds one speaker's caption and branded creative. Edit the caption if you like, preview how the post will look, then copy it and download the creative.</p>
+  </div>
+</section>
+
+<main class="wrap grid" id="speakerGrid"></main>
+
+<section class="intro general">
+  <div class="wrap">
+    <h2>General event posts</h2>
+    <p>Anyone can share these from their personal LinkedIn. They work for speakers, partners, and Columbia clubs who want to post about the event without a personal angle.</p>
+  </div>
+</section>
+
+<div class="wrap grid" id="generalGrid"></div>
+
+<footer>
+  <div class="wrap">
+    <span>Impact Analytics</span>
+    <a href="https://www.impactanalytics.ai/events/columbiaai">Event page</a>
+    <a href="mailto:marketing@impactanalytics.ai">Questions? Contact marketing</a>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="LinkedIn post preview">
+  <div class="modal">
+    <div class="modal-top"><span>Preview: how this post will appear in the feed</span><button id="closePreview">Close</button></div>
+    <div class="post">
+      <div class="post-head">
+        <img id="pvAvatar" src="" alt="">
+        <div class="who">
+          <div class="name" id="pvName"></div>
+          <div class="sub" id="pvRole"></div>
+          <div class="time">Just now &middot; <span aria-hidden="true">&#127760;</span></div>
+        </div>
+      </div>
+      <div class="post-text" id="pvText"></div>
+    </div>
+    <div class="post-media"><img id="pvTile" src="" alt="Post creative"></div>
+    <div class="post-stats"><span>&#128077; 128</span><span>14 comments &middot; 6 reposts</span></div>
+    <div class="post-actions">
+      <span><svg viewBox="0 0 24 24"><path d="M19.46 11l-3.9-7.5a1 1 0 0 0-1.78 0L12 7h0l-1.78-3.5a1 1 0 0 0-1.78 0L4.54 11H2v2h2.2l1.55 7.2a1 1 0 0 0 .98.8h10.54a1 1 0 0 0 .98-.8L19.8 13H22v-2z"/></svg>Like</span>
+      <span><svg viewBox="0 0 24 24"><path d="M7 9h10v1H7zm0 4h7v-1H7zm16-2a6.78 6.78 0 0 1-2.84 5.61L12 22v-4H8A7 7 0 0 1 8 4h8a7 7 0 0 1 7 7z"/></svg>Comment</span>
+      <span><svg viewBox="0 0 24 24"><path d="M13.96 5H6c-.55 0-1 .45-1 1v10H3V6a3 3 0 0 1 3-3h7.96V0L19 4l-5.04 4zm-3.92 14H18c.55 0 1-.45 1-1V8h2v10a3 3 0 0 1-3 3h-7.96v3L5 20l5.04-4z"/></svg>Repost</span>
+      <span><svg viewBox="0 0 24 24"><path d="M21 3L0 10l7.66 4.26L16 8l-6.26 8.34L14 24z"/></svg>Send</span>
+    </div>
+  </div>
+</div>
+
+<script>
+const REG  = "https://www.impactanalytics.ai/events/columbiaai";
+const CDN  = "https://cdn.prod.website-files.com/68f790b0b6a276de2c89b5db/";
+const TILE = "https://cdn.prod.website-files.com/68f1125b379cfbe311ed1c6e/";
+const GENERAL_TILE = TILE + "6acf5c3e77638a323787ed21_Columbia%20x%20Impact%20Analytics%20-%20Save%20the%20Date%20-%20Post%201.png";
+const PLACEHOLDER_AVATAR = "data:image/svg+xml;utf8," + encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" fill="#e0dfdc"/><circle cx="24" cy="18" r="9" fill="#a8a7a3"/><path d="M6 44c2-10 10-14 18-14s16 4 18 14z" fill="#a8a7a3"/></svg>'
+);
+
+const speakers = [
+  { name:"Omar Besbes", role:"Professor of Business, Columbia University",
+    photo:CDN+"6abcec0f6ebf995692b38d74_Omar%20Besbes.avif",
+    tile:TILE+"6ace83fec3a8c08374657fb5_Omar%20Besbes.png",
+    caption:`When an AI Agent is choosing between your product and a competitor's, what tips their decision? My research shows these agents carry some of the same cognitive biases humans do, and that simple seller-side tweaks can meaningfully shift which product they pick. I'll present the findings on November 9 at The Retail Innovation Symposium: Rethinking the AI-Enabled Enterprise, hosted by Impact Analytics and Columbia Business School in NYC.
+
+Register: ${REG}
+
+#RetailAI #AIAgents #ColumbiaBusinessSchool` },
+  { name:"Melanie Brucks", role:"Associate Professor of Marketing, Columbia University",
+    photo:CDN+"6abceb4865d241daa908814a_Melanie%20Brucks.avif",
+    tile:TILE+"6ace83fefe4235bb395f81f1_Melanie%20Brucks.png",
+    caption:`AI "digital twins" are increasingly standing in for real shoppers in market research. But are they telling you what your customers actually think? My research found five consistent ways they get people wrong. On November 9, I'll share where retailers should be careful and where these tools still give you an edge.
+
+The Retail Innovation Symposium | Impact Analytics x Columbia Business School, NYC.
+
+Register: ${REG}
+
+#RetailAI #MarketResearch #ColumbiaBusinessSchool` },
+  { name:"Julia Cancro", role:"GTM, OpenAI",
+    photo:CDN+"6ac606582a0da5820e889f3d_Julia%20Cancro.avif",
+    tile:TILE+"6ace83ffcdc62ee55d9aaaef_Julia%20Cancro.png",
+    caption:`What's working with AI in retail, what isn't, and where should AI advise, recommend, or act on its own? On November 9, I'll join retail and business leaders, including speakers from Google, Foot Locker, and Signet Jewelers, along with Columbia faculty, to discuss these questions and what they mean for how retail enterprises work.
+
+Register: ${REG}
+
+#RetailAI #EnterpriseAI #ColumbiaBusinessSchool` },
+  { name:"Oliver Chen", role:"Managing Director, Retail, Cowen and Company",
+    photo:CDN+"6ac746b4b8424f37ecc0a0d1_Oliver%20Chen.avif",
+    tile:TILE+"6ace83fe9cc93b56509c3aa8_Oliver%20Chen.png",
+    caption:`AI is changing how retail work gets done: decisions, workflows, and the skills teams need. On Nov 9, I'll discuss how roles and leadership are adapting on the panel "Redesigning the Retail Enterprise for AI" at The Retail Innovation Symposium by Impact Analytics and Columbia Business School.
+
+Register: ${REG}
+
+#RetailAI #FutureOfRetail #ColumbiaBusinessSchool` },
+  { name:"Adam Elmachtoub", role:"Associate Professor, Columbia University",
+    photo:CDN+"6abceba23672d6c68ed5643e_Adam%20Elmachtoub.avif",
+    tile:TILE+"6ace83fe41fa6e7278ea45c1_Adam%20Elmachtoub.png",
+    caption:`Forecasting, inventory, logistics, and supply chain: the complex decisions retail operations run on. My research looks at how AI could transform them. I'll present it on Nov 9 at The Retail Innovation Symposium: Rethinking the AI-Enabled Enterprise, hosted by Impact Analytics and Columbia Business School.
+
+Register: ${REG}
+
+#RetailAI #Operations #SupplyChain` },
+  { name:"Juan Francisco Hernandez", role:"Sr. Director of Pricing and Inventory Optimization, Foot Locker",
+    photo:CDN+"6ac7b45a82786d0e6e520a90_image%202946.png",
+    tile:TILE+"6ace83ff3dceba544c5ab25f_Juan%20Francisco%20Hernandez.png",
+    caption:`Where is AI paying off in retail, and where has it fallen short? Where should it be allowed to make forecasting, inventory, and pricing decisions on its own? Retail leaders and Columbia faculty take on these questions on Nov 9. I'm looking forward to the conversation. Join me at The Retail Innovation Symposium, organized by Impact Analytics and Columbia Business School.
+
+Register: ${REG}
+
+#RetailAI #Pricing #InventoryOptimization` },
+  { name:"Kinshuk Jerath", role:"Professor of Business, Marketing, Columbia Business School",
+    photo:CDN+"6aad0c2f62230a87b73979e3_Kinshuk%20Jerath.avif",
+    tile:TILE+"6ace83fe0662c224ac7ebe87_Kinshuk%20Jerath.png",
+    caption:`Columbia Business School and Impact Analytics bring retail leaders, faculty, students, and alumni together in New York on Nov 9 for The Retail Innovation Symposium. I'll be moderating the panel "Redesigning the Retail Enterprise for AI," discussing how AI will reshape retail roles, workflows, decision-making, and the skills teams need.
+
+Register: ${REG}
+
+#RetailAI #ColumbiaBusinessSchool #FutureOfWork` },
+  { name:"Vidya Nagarajan", role:"Director of Product Management, Google",
+    photo:CDN+"6abcec6a6901d18d3302477d_Vidya%20Nagarajan.avif",
+    tile:TILE+"6ace83fd4698b01eb8768f9e_Vidya%20Nagarajan.png",
+    caption:`How should a retail enterprise be redesigned when AI takes on more of the work? On November 9, I'll join the panel "Redesigning the Retail Enterprise for AI" to discuss the roles, workflows, and skills organizations will need. Join me at The Retail Innovation Symposium, hosted by Impact Analytics and Columbia Business School.
+
+Register: ${REG}
+
+#RetailAI #EnterpriseAI #ColumbiaBusinessSchool` },
+  { name:"Seth Schumacher", role:"Senior Director of Demand and Store Planning, Signet Jewelers",
+    photo:CDN+"6ac79a119c30fbd5a49031a0_Seth%20Schumacher.png",
+    tile:TILE+"6ace83fe0662c224ac7ebe9a_Seth%20Schumacher.png",
+    caption:`A year into AI, what is working in retail planning and what is still catching up? I'm looking forward to a candid conversation with fellow retail leaders and Columbia faculty on November 9. Join me at The Retail Innovation Symposium: Rethinking the AI-Enabled Enterprise, hosted by Impact Analytics and Columbia Business School in New York.
+
+Register now: ${REG}
+
+#RetailAI #DemandPlanning #RetailInnovation` },
+  { name:"Jennifer Hoffman", role:"Manager of Central Planning, Arhaus",
+    photo:CDN+"6acf4e7e0202d4bdcade0472_Jennifer_Hoffman.png",
+    tile:TILE+"6acf5c589df2e7f23fc68b9d_Jennifer%20Hoffman.png",
+    caption:`Join me on stage at The Retail Innovation Symposium, hosted by Impact Analytics and Columbia Business School in New York. Leaders from Foot Locker, Signet, Google, and OpenAI, and Columbia faculty, on what is actually working with AI in retail and what to fix before 2027.
+
+Register now: ${REG}
+
+#RetailAI #RetailPlanning #ColumbiaBusinessSchool` },
+  { name:"Doug Rahden", role:"Director of Artificial Intelligence, Bealls",
+    photo:CDN+"6acf28528321406f94486b38_Doug%20Rahden.png",
+    tile:TILE+"6acf5c58d9bc407e79d4c9b5_Doug%20Rahden%20(1).png",
+    caption:`I'm speaking at The Retail Innovation Symposium on Nov 9, hosted by Impact Analytics and Columbia Business School. On stage with leaders from Foot Locker, Signet, Google, OpenAI, and Columbia faculty. My focus: what it takes to move AI from pilot to production, and why the hard part is rarely the model.
+
+Register for the event: ${REG}
+
+#RetailAI #EnterpriseAI #ColumbiaBusinessSchool` }
+];
+
+const generalPosts = [
+  { name:"General post 1", role:"Who is speaking", tile:GENERAL_TILE,
+    caption:`What can retail learn from the people shaping AI, markets, and consumer behavior? On November 9, hear perspectives from OpenAI, Google, Foot Locker, Signet, Bealls, Arhaus, Cowen, and from the leaders of Impact Analytics and faculties of Columbia Business School at the Retail Innovation Symposium.
+
+Meet the leaders and register: ${REG}
+
+#RetailAI #RetailInnovation #ColumbiaBusinessSchool` },
+  { name:"General post 2", role:"The leadership question", tile:GENERAL_TILE,
+    caption:`The Retail Innovation Symposium brings a pressing leadership question into focus: when AI can recommend, decide, and act, how should retailers redesign the business around it? Explore where decision authority belongs, how roles will change, and what leaders must rethink to compete in an AI-enabled enterprise.
+
+Meet the leaders on November 9 and hear their perspectives. Register now: ${REG}
+
+#RetailAI #FutureOfRetail #ColumbiaBusinessSchool` },
+  { name:"General post 3", role:"AI agents and digital twins", tile:GENERAL_TILE,
+    caption:`What if the AI Agents shopping on behalf of consumers could influence which brands win market share? At the Retail Innovation Symposium, Columbia faculty will share research on AI-driven buying behavior and digital twins, revealing implications retail leaders should consider before these tools reshape their markets.
+
+Hear different perspectives on November 9 at the symposium: ${REG}
+
+#RetailAI #AIAgents #ColumbiaBusinessSchool` }
+];
+
+/* ---------- Preview modal ---------- */
+const overlay = document.getElementById("overlay");
+const pv = { avatar:document.getElementById("pvAvatar"), name:document.getElementById("pvName"),
+             role:document.getElementById("pvRole"), text:document.getElementById("pvText"), tile:document.getElementById("pvTile") };
+
+function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function linkify(s){
+  return esc(s)
+    .replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>')
+    .replace(/(^|\s)(#[A-Za-z0-9_]+)/g, '$1<a href="#">$2</a>');
+}
+function renderText(full){
+  const LIMIT = 210;
+  if (full.length <= LIMIT) { pv.text.innerHTML = linkify(full); return; }
+  const short = full.slice(0, LIMIT).replace(/\s+\S*$/, "");
+  pv.text.innerHTML = linkify(short) + ' <button class="more">…more</button>';
+  pv.text.querySelector(".more").addEventListener("click", () => pv.text.innerHTML = linkify(full));
+}
+function openPreview(item, text, isGeneral){
+  pv.avatar.src = isGeneral ? PLACEHOLDER_AVATAR : item.photo;
+  pv.avatar.alt = isGeneral ? "Your profile photo" : item.name;
+  pv.name.textContent = isGeneral ? "First Name Last Name" : item.name;
+  pv.role.textContent = isGeneral ? "Job Title, Company Name" : item.role;
+  pv.tile.src = item.tile;
+  renderText(text);
+  overlay.classList.add("open"); document.body.classList.add("locked");
+  overlay.scrollTop = 0;
+}
+function closePreview(){ overlay.classList.remove("open"); document.body.classList.remove("locked"); }
+document.getElementById("closePreview").addEventListener("click", closePreview);
+overlay.addEventListener("click", e => { if (e.target === overlay) closePreview(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closePreview(); });
+
+/* ---------- Card builder ---------- */
+function buildCard(item, isGeneral){
+  const fname = item.name.replace(/\s+/g, "-") + ".png";
+  const card = document.createElement("article");
+  card.className = "card";
+  card.innerHTML = `
+    <img src="${isGeneral ? item.tile : item.photo}" alt="${item.name}" loading="lazy">
+    <div class="body">
+      <h3>${item.name}</h3>
+      <p class="role">${item.role}</p>
+      <label>Post caption</label>
+      <textarea></textarea>
+      <p class="note"></p>
+      <div class="btns">
+        <button class="btn btn-ghost preview">Preview on LinkedIn</button>
+      </div>
+      <div class="btns" style="margin-top:0">
+        <button class="btn btn-secondary copy">Copy caption</button>
+        <a class="btn btn-primary dl" href="${item.tile}" download="${fname}" target="_blank" rel="noopener">Download creative</a>
+      </div>
+    </div>`;
+  const ta = card.querySelector("textarea");
+  const note = card.querySelector(".note");
+  ta.value = item.caption;
+  ta.addEventListener("input", () => note.textContent = "");
+
+  card.querySelector(".preview").addEventListener("click", () => openPreview(item, ta.value.trim() || item.caption, isGeneral));
+
+  card.querySelector(".copy").addEventListener("click", async () => {
+    const text = ta.value.trim();
+    if (!text) { note.textContent = "Add a caption first"; return; }
+    try { await navigator.clipboard.writeText(text); note.textContent = "Caption copied"; }
+    catch { ta.select(); note.textContent = "Press Ctrl+C or Cmd+C to copy"; }
+    setTimeout(() => note.textContent = "", 2000);
+  });
+
+  card.querySelector(".dl").addEventListener("click", async (e) => {
+    e.preventDefault();
+    const btn = e.currentTarget;
+    btn.textContent = "Preparing";
+    try {
+      const res = await fetch(item.tile, { mode: "cors" });
+      if (!res.ok) throw new Error();
+      const blob = await res.blob();
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = fname;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+      note.textContent = "Creative downloaded";
+    } catch {
+      note.innerHTML = `Couldn't download directly. <a href="${item.tile}" target="_blank" rel="noopener">Open the creative</a> and save it from there.`;
+    }
+    btn.textContent = "Download creative";
+    setTimeout(() => { if (note.textContent === "Creative downloaded") note.textContent = ""; }, 2000);
+  });
+  return card;
+}
+
+const speakerGrid = document.getElementById("speakerGrid");
+speakers.forEach(s => speakerGrid.appendChild(buildCard(s, false)));
+
+const generalGrid = document.getElementById("generalGrid");
+generalPosts.forEach(g => generalGrid.appendChild(buildCard(g, true)));
+</script>
+</body>
+</html>
